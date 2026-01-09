@@ -1043,9 +1043,30 @@
         <conditions>
           <condition>
             <negated>N</negated>
-            <leftvalue>trip_id</leftvalue>
-            <function>IS NOT NULL</function>
-            <rightvalue/>
+            <conditions>
+              <condition>
+                <negated>N</negated>
+                <leftvalue>trip_id</leftvalue>
+                <function>IS NOT NULL</function>
+                <rightvalue/>
+              </condition>
+              <condition>
+                <negated>N</negated>
+                <operator>AND</operator>
+                <leftvalue>trip_id</leftvalue>
+                <function>&lt;></function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>' ' </text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+            </conditions>
           </condition>
           <condition>
             <negated>N</negated>
@@ -1187,8 +1208,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>160</yloc>
+      <xloc>528</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1356,8 +1377,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>80</yloc>
+      <xloc>928</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
